@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Navigation</title>
+    <style>
+        .nav{
+
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid;
+            background-color: coral;
+
+        }
+
+        .nav .menu {
+            margin: 0px;
+            padding: 10px;
+            text-align: center;
+            background-color: brown;
+            position: relative;
+        }
+
+        .nav .menu li{
+            list-style: none;
+            margin: 0px 20px;
+            font-size: 20px;
+            display: inline;
+            color: white;
+            background-color: green;
+            padding: 11px 0px;
+            
+        }
+
+        .nav .menu li:hover .sub { visibility: visible;}
+
+        .nav .menu li .sub {
+            /* display: flex; */
+            width: 50%;
+            position: absolute;
+            top: 38px;
+            left: 388px;
+            background-color: lightblue;
+            text-align: left;
+            margin: 0px;
+            padding: 10px;
+            visibility: hidden;
+            height: 300px;
+        }
+
+        .nav .menu li .sub li{ 
+            display: block;
+            margin: 10px;
+            background-color: transparent;
+            color: black;
+            position: relative;
+        }
+
+        .nav .menu li .sub li .side{
+           border: 1px solid;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 140px;
+            visibility: hidden;
+            height: 300px;
+            display: flex;
+        }
+
+        .nav .menu li .sub li .side ul {
+            background-color: grey;
+            margin-right: 20px;
+        }
+
+        .nav .menu li .sub li:hover .side { visibility: visible;}
+
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <ul class="menu">
+            <li>News
+                <ul class="sub">
+                    <li>Fashion
+                        <div class="side">
+                            <ul><li>Fashion 1</li></ul>
+                            <ul><li>Fashion 2</li></ul>
+                        </div>
+
+                    </li>
+                    <li>Technology
+                        <div class="side">
+                            <ul><li>Technology 1</li></ul>
+                            <ul><li>Technology 2</li></ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>Entertainment</li>
+            <li>News</li>
+            <li>News</li>
+        </ul>
+
+    </div>
+    
+</body>
+</html>
